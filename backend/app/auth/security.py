@@ -1,4 +1,6 @@
+import os
 from datetime import datetime, timedelta
+
 
 from fastapi import Depends, HTTPException
 from fastapi.security import OAuth2PasswordBearer
@@ -14,7 +16,7 @@ from app.models.user import User
 # JWT CONFIGURATION
 # ==========================================
 
-SECRET_KEY = "your-secret-key-change-this"
+SECRET_KEY = os.getenv("SECRET_KEY", "dev-secret-key")
 ALGORITHM = "HS256"
 
 oauth2_scheme = OAuth2PasswordBearer(
