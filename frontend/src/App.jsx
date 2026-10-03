@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 
-const API = "http://127.0.0.1:8000";
+const API = "https://multi-tenant-event-system.onrender.com";
 
 function App() {
   const [analytics, setAnalytics] = useState(null);
